@@ -20,7 +20,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>tu', vim.cmd.UndotreeToggle, { desc = 'Toggle undotree' })
 
 -- Highlight when yanking (copying) text
 --  See `:help vim.hl.on_yank()`
