@@ -1,0 +1,132 @@
+/* 
+ * Dark Blue Theme for Waybar 
+ * Using JetBrainsMono Nerd Font 
+ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    /* Transparent background for the bar itself */
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* 
+ * BUTTONS / WORKSPACES 
+ */
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    /* Use box-shadow to draw a border at the bottom */
+    box-shadow: inset 0 -3px transparent;
+    /* Remove default borders */
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #1e66f5; /* Bright Blue */
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+/* 
+ * MODULES 
+ */
+
+/* General Styling for all Right-side modules */
+#clock,
+#hardware,
+#backlight,
+#network,
+/* #pulseaudio, */
+#audio,
+#tray,
+#language,
+#power,
+#mpris,
+#custom-power {
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: #ffffff;
+    /* The Dark Blue Background Color */
+    background-color: #11111b; 
+    border-radius: 12px;
+    border: 1px solid #1e66f5; /* Thin blue border */
+}
+
+/* Specific adjustments */
+
+#wireplumber {
+    margin-right: 5px;
+}
+
+#language {
+    min-width: 16px;
+    padding: 0 10px;
+}
+
+#clock {
+    background-color: #1e66f5; /* Make the clock pop with brighter blue */
+    color: #ffffff;
+}
+
+#temperature.critical {
+    color: #f53c3c;
+}
+
+#power-profiles-daemon {
+    margin-right: 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #26A65B;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#custom-power {
+    background-color: #f53c3c;
+    border-color: #f53c3c;
+    margin-right: 15px; /* Add space to the edge */
+    padding-left: 12px;
+    padding-right: 17px;
+}
+
+/* Animations */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
