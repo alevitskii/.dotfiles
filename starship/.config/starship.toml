@@ -16,8 +16,11 @@ read_only = " 󰌾"
 symbol = " "
 style = "bold purple"
 
+[git_status]
+disabled = true
+
 [package]
-disabled = true # Don't show package version (cleaner)
+disabled = true
 
 [username]
 show_always = true

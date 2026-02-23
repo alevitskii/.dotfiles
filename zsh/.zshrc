@@ -1,4 +1,3 @@
-# Lines configured by zsh-newuser-install
 eval "$(starship init zsh)"
 
 HISTFILE=~/.zsh_history
