@@ -1,6 +1,6 @@
 theme=TokyoNight Night
 background-opacity = 0.85
-font-size=14
+font-size=20
 
 # Make Ctrl+[ behave like Esc in terminal applications.
 keybind = ctrl+[=text:\x1b
