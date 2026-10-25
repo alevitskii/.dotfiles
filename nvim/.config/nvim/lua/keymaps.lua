@@ -53,8 +53,8 @@ vim.keymap.set('n', ']q', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '[l', '<cmd>lprevious<CR>zz')
 vim.keymap.set('n', ']l', '<cmd>lnext<CR>zz')
 
--- Paste and delete without losing current buffer
-vim.keymap.set('x', '<leader>p', [["_dP]])
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank into system clipboard' })
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste over something w/o losing buffer' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete into void' })
 
 -- Substitute the word the cursor is on

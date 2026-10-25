@@ -64,7 +64,7 @@ systemctl enable --user app-com.mitchellh.ghostty.service
 # lock screen and idling: hyprlock and hypridle
 sudo pacman -S hyprlock
 sudo pacman -S hypridle
-# Make sure not to configure binds for lid switch in hyprland.conf - it will
+# Make sure not to configure binds for lid switch in hyprland.lua - it will
 # clash with corresponding settings in hypridle.conf.
 # Be careful configuring hypr{idle,lock} with /etc/systemd/logind.conf - 
 # configs may clash with each other causing unwanted systemd suspend.
@@ -73,7 +73,7 @@ sudo pacman -S hyprsunset
 
 
 # for external keyboard check hyprctl devices and make corresponding changes
-# to hyprland.conf for your keyboard device name
+# to hyprland/input.lua for your keyboard device name
 
 # network
 sudo pacman -S networkmanager
@@ -141,6 +141,8 @@ sudo pacman -S openssh
 # for wayland events: keycodes, mouse etc
 sudo pacman -S wev
 sudo pacman -S neovim
+# Required to build parsers with nvim-treesitter's main branch (Neovim 0.12+).
+sudo pacman -S tree-sitter-cli
 sudo pacman -S tmux
 # for .dotfiles management
 sudo pacman -S stow
@@ -167,4 +169,17 @@ sudo pacman -S slurp
 sudo pacman -S swappy
 # image viewer
 sudo pacman -S imv
+# "cat with wings"
+sudo pacman -S bat
+# sometimes useful
+sudo pacman -S podman
 
+# enable NTP
+sudo timedatectl set-ntp true
+# wait a little...
+# check
+timedatectl
+timedatectl timesync-status
+
+# trying to fix laggy discord
+sudo pacman -S intel-media-driver libva-utils
