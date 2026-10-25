@@ -141,6 +141,8 @@ sudo pacman -S openssh
 # for wayland events: keycodes, mouse etc
 sudo pacman -S wev
 sudo pacman -S neovim
+# Required to build parsers with nvim-treesitter's main branch (Neovim 0.12+).
+sudo pacman -S tree-sitter-cli
 sudo pacman -S tmux
 # for .dotfiles management
 sudo pacman -S stow
