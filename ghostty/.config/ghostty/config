@@ -2,6 +2,9 @@ theme=TokyoNight Night
 background-opacity = 0.85
 font-size=14
 
+# Make Ctrl+[ behave like Esc in terminal applications.
+keybind = ctrl+[=text:\x1b
+
 # https://ghostty.org/docs/linux/systemd#starting-ghostty-at-login
 quit-after-last-window-closed = true
 quit-after-last-window-closed-delay = 5m

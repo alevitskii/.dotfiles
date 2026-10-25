@@ -8,8 +8,9 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 
-bindkey -e
-
+bindkey -v
+# Enter vi command mode with Ctrl+] as well as Esc.
+bindkey -M viins '^]' vi-cmd-mode
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
