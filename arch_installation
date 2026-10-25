@@ -167,4 +167,17 @@ sudo pacman -S slurp
 sudo pacman -S swappy
 # image viewer
 sudo pacman -S imv
+# "cat with wings"
+sudo pacman -S bat
+# sometimes useful
+sudo pacman -S podman
 
+# enable NTP
+sudo timedatectl set-ntp true
+# wait a little...
+# check
+timedatectl
+timedatectl timesync-status
+
+# trying to fix laggy discord
+sudo pacman -S intel-media-driver libva-utils
